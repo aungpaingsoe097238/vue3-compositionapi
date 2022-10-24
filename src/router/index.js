@@ -3,6 +3,7 @@ import PostView from '../views/PostView.vue'
 import HomeView from '../views/HomeView.vue'
 import PostDetailView from '../views/postDetailView.vue'
 import ModelView from '../views/ModelView.vue'
+import PiniaView from '../views/PiniaView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/models',
       name: 'model',
       component: ModelView
+    },
+    {
+      path: '/pinia',
+      name: 'pinia',
+      component: PiniaView
     }
   ]
 })

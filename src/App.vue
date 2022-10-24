@@ -6,6 +6,8 @@
     <router-link to="/posts">Posts</router-link>
     |
     <router-link to="/models">Models</router-link>
+    |
+    <router-link to="/pinia">Pinia</router-link>
 
     <router-view v-slot="{ Component }">
       <keep-alive>
