@@ -1,26 +1,20 @@
-<template>
-  <div>
-
-    <router-link to="/">Home</router-link>
-    |
-    <router-link to="/posts">Posts</router-link>
-    |
-    <router-link to="/models">Models</router-link>
-    |
-    <router-link to="/pinia">Pinia</router-link>
-
-    <router-view v-slot="{ Component }">
-      <keep-alive>
-        <component :is="Component" />
-      </keep-alive>
-    </router-view> 
-
-  </div>
-</template>
-
 <script setup>
-
+import Nav from "./components/Nav.vue";
 </script>
 
-<style lang="scss" >
-</style>
+<template>
+  <b-container>
+    <b-row>
+      <b-col>
+        <header class="fixed-top top-0">
+          <Nav></Nav>
+        </header>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col>
+        <RouterView />
+      </b-col>
+    </b-row>
+  </b-container>
+</template>
